@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/astalosj/sqaaas-try git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-lilac-zebu.sh
-        container: qc.acc_tacky-sangria-crocodile
+        - /usr/bin/env sh .sqa/script.scaly-khaki-olm.sh
+        container: qc.acc_skimpy-amaranth-bobcat
   QC.Doc:
     repos:
       github.com/astalosj/sqaaas-try find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-sepia-fossa.sh
-        container: qc.doc_blurry-cerise-dunker
+        - /usr/bin/env sh .sqa/script.bumpy-zucchini-maltese.sh
+        container: qc.doc_wiggy-flax-chameleon
       github.com/astalosj/sqaaas-try git:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-grey-hummingbird.sh
-        container: qc.doc_gummy-sapphire-dragon
+        - /usr/bin/env sh .sqa/script.wiggy-buff-balinese.sh
+        container: qc.doc_zippy-plum-angelfish
       github.com/astalosj/sqaaas-try markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-thistle-mongrel.sh
-        container: qc.doc_randy-brass-mongrel
+        - /usr/bin/env sh .sqa/script.lovely-azure-retriever.sh
+        container: qc.doc_gummy-denim-buzzard
       github.com/astalosj/sqaaas-try restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-silver-armadillo.sh
-        container: qc.doc_muzzy-ochre-collie
+        - /usr/bin/env sh .sqa/script.flabby-pink-hyena.sh
+        container: qc.doc_sunny-cream-dodo
   QC.Lic:
     repos:
       github.com/astalosj/sqaaas-try licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-chestnut-quetzal.sh
-        container: qc.lic_silly-cinnabar-whippet
+        - /usr/bin/env sh .sqa/script.crappy-cardinal-affenpinscher.sh
+        container: qc.lic_leaky-maroon-albatross
   QC.Met:
     repos:
       github.com/astalosj/sqaaas-try validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-firebrick-chow.sh
-        container: qc.met_lumpy-azure-foxhound
+        - /usr/bin/env sh .sqa/script.scummy-grey-oriole.sh
+        container: qc.met_muzzy-beige-squid
   QC.Sec:
     repos:
       github.com/astalosj/sqaaas-try bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-asparagus-mau.sh
-        container: qc.sec_beady-ivory-balinese
+        - /usr/bin/env sh .sqa/script.shaky-plum-neanderthal.sh
+        container: qc.sec_sickly-periwinkle-fox
   QC.Sty:
     repos:
       github.com/astalosj/sqaaas-try flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-chocolate-moth.sh
-        container: qc.sty_crabby-orchid-newfoundland
+        - /usr/bin/env sh .sqa/script.craggy-emerald-dane.sh
+        container: qc.sty_chewy-indigo-mule
       github.com/astalosj/sqaaas-try jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-orange-horse.sh
-        container: qc.sty_geeky-fuchsia-fossa
+        - /usr/bin/env sh .sqa/script.tasty-cerulean-lemming.sh
+        container: qc.sty_skinny-jade-collie
   QC.Ver:
     repos:
       github.com/astalosj/sqaaas-try get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-cobalt-peccary.sh
-        container: qc.ver_snappy-lime-oyster
+        - /usr/bin/env sh .sqa/script.stealthy-zucchini-newt.sh
+        container: qc.ver_shabby-blue-penguin
 timeout: 1800
