@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/astalosj/sqaaas-try:
+      branch: sqaaas
+      repo: https://github.com/astalosj/sqaaas-try
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/astalosj/sqaaas-try git:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-auburn-caterpillar.sh
+        container: qc.acc_shaky-wisteria-bobcat
+  QC.Doc:
+    repos:
+      github.com/astalosj/sqaaas-try find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-ecru-mayfly.sh
+        container: qc.doc_stealthy-firebrick-tetra
+      github.com/astalosj/sqaaas-try git:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-violet-civet.sh
+        container: qc.doc_blurry-violet-caterpillar
+      github.com/astalosj/sqaaas-try markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-sapphire-okapi.sh
+        container: qc.doc_lovely-scarlet-flounder
+      github.com/astalosj/sqaaas-try restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-wisteria-fousek.sh
+        container: qc.doc_skanky-taupe-kiwi
+  QC.Lic:
+    repos:
+      github.com/astalosj/sqaaas-try licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-turquoise-zebra.sh
+        container: qc.lic_seedy-lavender-hummingbird
+  QC.Sec:
+    repos:
+      github.com/astalosj/sqaaas-try bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-burgundy-malamute.sh
+        container: qc.sec_flabby-cerise-cheetah
+  QC.Sty:
+    repos:
+      github.com/astalosj/sqaaas-try flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-orchid-toucan.sh
+        container: qc.sty_sleepy-chocolate-jackal
+  QC.Ver:
+    repos:
+      github.com/astalosj/sqaaas-try get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-puce-penguin.sh
+        container: qc.ver_queasy-pumpkin-liger
+timeout: 1800
